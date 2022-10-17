@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME	:= /usr/lib/jvm/default-java
+
+MAVEN_REPO		:= http://repo1.maven.org/maven2/org/apache/felix/org.osgi.foundation/
+POM_VERSION		:= 1.2.0
+VERSION			:= $(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | sed -e 's/-[^-]*$$//')
+JAR_NAME		:= ee.foundation
+PACKAGE			:= libosgi-foundation-ee-java
+
+%:
+	dh $@ --with javahelper --with jh_maven_repo_helper
+
+override_jh_build:
+	jh_build --no-javadoc ee.foundation.jar src
+
+override_jh_manifest:
+	jar umf src/META-INF/MANIFEST.MF debian/$(PACKAGE)/usr/share/java/$(JAR_NAME).jar
+
+get-orig-source:
+	debian/orig-tar.sh --upstream-version $(VERSION)
+
+get-orig-pom:
+	wget --user-agent="" -O debian/pom.xml $(MAVEN_REPO)/$(POM_VERSION)/org.osgi.foundation-$(POM_VERSION).pom
+	perl -p -i -e 's/<version>$(POM_VERSION)/<version>$(VERSION)/' debian/pom.xml

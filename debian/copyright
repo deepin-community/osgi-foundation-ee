@@ -1,0 +1,18 @@
+Format: https://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=174
+Upstream-Name: OSGi Foundation EE Classes
+Upstream-Contact: OSGi Alliance (http://www.osgi.org/)
+Source: http://www.osgi.org/Download/Release4V42
+
+Files: *
+Copyright: 2001, Sun Microsystems
+           2005, OSGi Alliance
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2010, Ludovic Claude <ludovic.claude@laposte.net>
+           2011, Damien Raude-Morvan <drazzib@debian.org>
+License: Apache-2.0
+
+License: Apache-2.0
+ On Debian systems, the complete text of the Apache License Version 2.0,
+ can be found in /usr/share/common-licenses/Apache-2.0.

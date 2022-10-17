@@ -1,0 +1,30 @@
+Source: osgi-foundation-ee
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Ludovic Claude <ludovic.claude@laposte.net>
+Build-Depends:
+ ant,
+ debhelper (>= 11),
+ default-jdk,
+ javahelper,
+ maven-repo-helper
+Standards-Version: 4.1.4
+Homepage: http://www.osgi.org/Specifications/HomePage
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/osgi-foundation-ee.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/osgi-foundation-ee.git
+
+Package: libosgi-foundation-ee-java
+Architecture: all
+Depends:
+ ${java:Depends},
+ ${misc:Depends}
+Description: Java OSGi API - Foundation Execution Environment
+ OSGi, for Open Services Gateway initiative framework, is a module system and
+ service platform for the Java programming language.
+ .
+ This package contains OSGi Foundation Execution Environment
+ for Release 4 Version 4.2.
+ This provide Java interfaces for javax.microedition package (J2ME) and
+ java.net/java.lang/java.io/java.util packages (J2SE).

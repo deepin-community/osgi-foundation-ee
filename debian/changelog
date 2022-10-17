@@ -1,0 +1,35 @@
+osgi-foundation-ee (4.2.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Drop libosgi-foundation-ee-java-doc package to work around a FTBFS
+    with Java 9. The documentation is expendable. (Closes: #893382)
+
+ -- Markus Koschany <apo@debian.org>  Sun, 17 Jun 2018 19:22:55 +0200
+
+osgi-foundation-ee (4.2.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Remove Damien Raude-Morvan from Uploaders. (Closes: #889335)
+  * Switch to compat level 11.
+  * Use https for Vcs field.
+  * Declare compliance with Debian Policy 4.1.3.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 28 Mar 2018 14:11:54 +0200
+
+osgi-foundation-ee (4.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use compat level 9 and require debhelper >= 9.
+  * wrap-and-sort -sa.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Use canonical Vcs-URI.
+  * Fix Lintian warning syntax-error-in-dep5-copyright.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 21 Nov 2015 17:12:02 +0100
+
+osgi-foundation-ee (4.2.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #643980).
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 02 Oct 2011 19:40:22 +0200
